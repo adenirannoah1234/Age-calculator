@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,400;1,700;1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <div class="main">
+       
+        <div class="inputBoxs">
+            <div class="inputbox">
+                <p class="title">DAY</p>
+                <input type="text" class="day" id="day" placeholder="dd" minlength="1" maxlength="2" required>
+            </div>
+            <div class="inputbox">
+                <p class="title">MONTH</p>
+                <input type="text" class="month" id="month" placeholder="mm" minlength="1" maxlength="2" required>
+            </div>
+            <div class="inputbox">
+                <p class="title">YEAR</p>
+                <input type="text" class="year" id="year" placeholder="yyyy" minlength="4" maxlength="4" required>
+                
+            </div>
+        </div>
+        <div class="content">
+            <p class="alert"></p>
+            <p class="alert"></p>
+            <p class="alert"></p>
+        </div>
+        <div class="second">
+            <hr>
+            <div>
+            <button class="submit">SUBMIT</button>
+           </div>
+        </div>
+        
+        <div class="result">
+            <p><span id="years"></span>years</p>
+            <p><span id="months"></span>months</p>
+            <p><span id="days"></span>days</p>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
