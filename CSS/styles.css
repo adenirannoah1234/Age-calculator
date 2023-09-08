@@ -15,7 +15,7 @@ body{
     height: 430px;
     margin-top: 40px;
     padding: 30px;
-    border-bottom-right-radius: 100px;
+    border-bottom-right-radius: 120px;
     box-shadow: 5px 5px 10px rgb(207, 207, 207);
 }
 .inputBoxs{
@@ -28,14 +28,15 @@ input{
     margin-top: 5px;
     width: 60%;
     padding: 10px 0;
+    padding-left: 9px;
     border-radius: 3px;
 }
 button{
     all: unset;
     background-color: hsl(259, 100%, 65%);
-    padding: 10px 5px;
-    /* margin-top: 20px;
-    margin-left: 430px; */
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
 }
 .result{
     font-size: 50px;

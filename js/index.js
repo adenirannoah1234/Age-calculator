@@ -10,21 +10,23 @@ function calculateAge() {
     const year = parseInt(yearly.value);
 
     const currentDate = new Date();
-    const birthDate = new Date(year, month - 1, day); // Note: Month is zero-indexed
+    const birthDate = new Date(year, month - 1, day); 
 
     if (birthDate > currentDate) {
-        alert.style.display = 'block';
-        alert.textContent = 'Must be a valid date.'
-        setTimeout(function () {
-            alert.style.display = 'none';
-        }, 5000);
-        return; // Stop further processing
+       alert.style.display = 'block';
+       alert.textContent = 'Must be a valid date.'
+       setTimeout(function () {
+       alert.style.display = 'none';
+       }, 5000);
+          return;
     }
     const ageInMilliseconds = currentDate - birthDate;
 
     let ageInYears = currentDate.getFullYear() - birthDate.getFullYear();
-    let ageInMonths = currentDate.getMonth() + 1 - birthDate.getMonth();
+    console.log(ageInYears);
+    let ageInMonths = currentDate.getMonth() - birthDate.getMonth();
     let ageInDays = currentDate.getDate() - birthDate.getDate();
+    console.log(ageInDays);
 
 
     if (ageInDays < 0) {
@@ -43,9 +45,10 @@ function calculateAge() {
 submitButton.addEventListener('click', function (e) {
     e.preventDefault();
 
-    alert.style.display = 'none'; // Hide any previous alert
-
     if (everyMonth.value === '' || daily.value === '' || yearly.value === '') {
+         document.querySelector("#years").textContent = '' ;
+         document.querySelector("#months").textContent = '' ;
+         document.querySelector("#days").textContent = '';
         alert.style.display = 'block';
         alert.textContent = 'All fields are required.';
         setTimeout(function () {
@@ -57,10 +60,18 @@ submitButton.addEventListener('click', function (e) {
         setTimeout(function () {
             alert.style.display = 'none';
         }, 5000);
-    } else {
+    } else if (!Number(everyMonth.value) || !Number(daily.value) || !Number(yearly.value)) {
+        alert.style.display = 'block';
+        alert.textContent = 'All fields are required.';
+        setTimeout(function () {
+            alert.style.display = 'none';
+        }, 5000);
+        
+    }
+    else{
     
         calculateAge();
         
-        setInterval(calculateAge, 1000);
+        // setInterval(calculateAge, 1000);
     }
 });
