@@ -52,12 +52,38 @@ span{
 }
 hr{
     width: 90%;
-    /* border: dotted; */
-}
+   }
 .alert{
     color: red;
     font-size: 12px;
 }
 .content{
     display: flex;
+}
+@media screen and (max-width: 992px){
+    .main{
+        width: 55%;
+    }
+}
+@media screen and (max-width: 768px){
+    .main{
+        width: 65%;
+    }
+
+}
+@media screen and (max-width: 576px){
+    .main{
+        width: 80%;
+    }
+    .inputBoxs{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 480px){
+    .main{
+        width: 100%;
+    }
+    input{
+        width: 70%;
+    }
 }
